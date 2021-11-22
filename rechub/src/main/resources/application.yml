@@ -1,2 +1,24 @@
 server:
   port: 8081
+
+spring:
+  data:
+    cassandra:
+      keyspace-name: <keyspace-name>
+      username: <client-id>
+      password: <client-secret>
+      schema-action: create-if-not-exists
+      request:
+        timeout: 10s
+      connection:
+        connect-timeout: 10s
+        init-query-timeout: 10s
+
+datastax.astra:
+    secure-connect-bundle: <secure-bundle-path>
+
+astra.db:
+    id: <db-cluster-id>
+    region: <db-region>
+    keyspace: <keyspace-name>
+    application.token: <token>
